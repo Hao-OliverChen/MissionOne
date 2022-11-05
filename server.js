@@ -150,7 +150,7 @@ app.get('/logout', function (req, res) {
 app.post('/register', async (req, res) => {
   // check for duplicate
   const exists = await User.exists({ serialNum: req.body.serialNum });
-  if (exists) {
+  if (!exists) {
     res.redirect('/register?error=true');
     return;
   };
@@ -161,7 +161,9 @@ app.post('/register', async (req, res) => {
   // create and store the new user
   const result = await User.create({
     serialNum: req.body.serialNum,
-    safeCode: hashedPwd
+    shoeName: "Kyrie 8",
+    safeCode: hashedPwd,
+    candidate: "unknown"
   });
 
   result.save();
