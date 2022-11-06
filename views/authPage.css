@@ -8,7 +8,7 @@
 
 body {
 	background-color: #5d602f;
-	background-image: linear-gradient(to bottom right, #b16f39 30%, #968e22);
+	background-image: linear-gradient(to bottom right, #2c8099 25%, #5d3b92);
 }
 
 .app {
@@ -32,7 +32,7 @@ form {
 	width: 100%;
 	max-width: 400px;
 	padding: 50px 30px;
-	background-image: linear-gradient(to bottom, #9e535a, #ad5f94);
+	background-image: linear-gradient(to bottom, #80a155, #459480);
 	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 	border-radius: 16px;
 }
