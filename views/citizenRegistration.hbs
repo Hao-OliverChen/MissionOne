@@ -3,44 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Login page for ShueWorld voting infrastructure">
+	<meta name="description" content="register page for Rock Paper Scissors game">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="authPage.css" />
     <title>Document</title>
 </head>
 <body>
-    <form action="/login" method="post">
+    <form action="/citizen-registration" method="post">
 	<div>
 		{{#if error}}
-		<p class="err-msg">Serial number or safe code is incorrect</p>
+		<p class="err-msg">Such citizen already exists</p>
 		{{/if }}
-		<h1>Login</h1>
+		<h1>Citizen Registraion</h1>
 	</div>
 	<div class="form-group">
 		<label>Serial Number: </label>
 		<input 
 			type="text" 
-			name="username" 
+			name="serialNum" 
 			id="serialNum" 
 			placeholder="Enter your serial number" 
 			required />
 	</div>
-	<div class="form-group">
-		<label>Safe Code:</label>
-		<input 
-			type="password" 
-			name="password" 
-			id="safeCode"
-			placeholder="Enter your safe code" 
-			required />
-	</div>
 	<div>
-		<input type="submit" value="Login" />
+		<input type="submit" value="Register" />
 	</div>
-    <p style="text-align:center;">First time voting?</p>
     <div style="text-align:center">
-    <a href="/register">Register</a>
+    <a href="/citizen-deletion">click to delete</a>
     </div>
+
 </form>
 </body>
 </html>
